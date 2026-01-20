@@ -1,0 +1,104 @@
+/* 글꼴 변경 하기 */
+#ff1 {
+    font-family: "궁서체";
+}
+
+/* ~~체 == Monospace (고정된 글자 폭)*/
+#ff2 {
+    font-family: "궁서체";
+}
+
+/* 여러 글꼴을 작성하여 앞쪽 글꼴이 없으면
+  뒤쪽 글꼴을 적용*/
+#ff3 {
+    font-family: "짱구엄마체", "맑은궁서체", "굴림체";
+}
+
+/* 웹 폰트 */
+@font-face {
+    font-family: 'YPairing';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-4@1.1/YPairingFont.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'YPairing';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-4@1.1/YPairingFont-Bd.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+#ff4{
+    font-family: 'YPairing';
+}
+
+
+#ff5 {
+    font-family: "Rubik Storm", system-ui;
+    font-size: x-large;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* font-size */
+#size1 {
+font-size: 32px; /* 브라우저 기본 폰트 == 16px */
+}
+
+#size2 {
+    font-size: 2em; /* 부모 16px의 2배 */
+}
+
+#size3 {
+    /* % : 부모 요소의 font-size 비례한 크기(%단위)를 지정 */
+    font-size: 200%; /* 부모 16px의 2배*/
+}
+
+#size4 {
+    font-size: 24px;
+}
+
+/*:root {
+    font-size: 10px;
+    --main-colcr: yellow;
+}*/
+#size5{
+    /* rem :    :root에 정의된 font-size에 대해 비례한 단위 */
+    font-size: 3rem;
+    /*
+    background-color: var(--main-colcr);
+    */
+}
+
+/* 글꼴 두께 지정 스타일 */
+#fw1{
+    font-weight: bold;
+}
+#fw2{
+    font-weight: lighter;
+}
+#fw3{
+    font-weight: 900;
+}
+/* 작은 대문자로 변경 */
+#fv {
+    font-variant: small-caps;
+}
+
+
+/* 글꼴 스타일(기울임) */
+#fs1 {
+    font-style: italic;
+}
+
+#fs2 {
+    font-style: oblique;
+}
+
+#f1{
+    font : 24px "궁서체"
+}
+
+#f2{
+    font: italic bold 25px/50px "굴림";
+}

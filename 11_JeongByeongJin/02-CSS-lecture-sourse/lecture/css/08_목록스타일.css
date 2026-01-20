@@ -1,0 +1,47 @@
+#default-bullet {
+    list-style-type: disc; /* 기본 값 */
+}
+
+#circle-bullet {
+    list-style-type: circle;
+}
+
+#square-bullet {
+    list-style-type: square;
+}
+
+#none-bullet {
+    list-style-type: none;
+}
+
+
+/* 순서 있는 목록 */
+#default-number {
+    list-style-type: decimal;
+}
+
+#zero-number {
+    list-style-type: decimal-leading-zero;
+}
+
+#lower-rome-number {
+    list-style-type: lower-roman;
+}
+
+#upper-rome-number {
+    list-style-type: upper-roman;
+}
+
+#lower-alpha {
+    list-style-type: lower-alpha;
+}
+
+#upper-alpha {
+    list-style-type: upper-alpha;
+}
+
+/* 불렛 이미지 변경 */
+#image-bullet {
+    list-style-image: url("../images/gun16.png");
+}
+

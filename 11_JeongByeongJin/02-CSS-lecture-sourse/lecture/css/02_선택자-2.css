@@ -1,0 +1,143 @@
+/* 기본 속성 선택자 */
+
+/* [속성명=속성값] : 속성명과 속성 값이 일치하는 요소를 모두 선택 */
+[name=name2] {
+    background-color: orange;
+}
+
+/* [속성명~=속성값] :
+  속성 안의 값이 특정 단어를 포함하면 선택(띄어쓰기 단위로 구분) */
+div[name~=name1] {
+    background-color: yellow;
+}
+
+/* [속성명|=속성값] : 속성 안의 값이 특정 값과 일치하거나
+                    "-" 문자가 뒤에 작성된 요소를 선택 */
+div[class|=class] {
+    background-color: cyan;
+}
+
+/* [속성명^=속성값] : 접두사로 속성값이 포함된 요소를 선택 */
+div[name^=name] {
+    font-size: 32px;
+}
+
+/* [속성명$=속성값] : 접미사로 속성값이 포함된 요소를 선택 */
+div[class$=class] {
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* [속성명*=속성값] : 특정 값이 속성값에 포함된 요소를 선택 */
+div[class*=div] {
+    color: red;
+}
+
+/* 자손(자식) 선택자 */
+#test1 > h4 {
+    background-color: crimson;
+}
+
+/* 선택자를 거듭 작성 가능 */
+#test1 > div > ul > li {
+    background-color: greenyellow;
+}
+
+
+/* 후손 선택자 */
+#test1 ul {
+    background-color: #cccccc;
+}
+
+
+/* 동위 선택자 */
+#div-test1 {
+    background-color: orangered;
+}
+
+/* #div-test1의 동위 관계 요소 중 뒤쪽 첫 번째 div 태그 요소 선택*/
+#div-test1 + div {
+    background-color: yellowgreen;
+}
+
+/* #div-test2의 동위 관계 요소 중 뒤쪽에 있는 모든 div 태그 요소 선택*/
+/*
+#div-test2 ~ div {
+  background-color: steelblue;
+}
+*/
+
+
+/* 체크박스 커스텀하기 */
+#check + label {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    display: inline-block; /* 크기 지정 가능한 inline 요소 */
+    border-radius: 20%; /* 모서리 곡률 */
+    user-select: none; /* 사용자 선택(드래그) 불가 */
+    cursor: pointer;
+}
+
+#check:checked + label {
+    background-image: url("../images/checkbox.png");
+    background-size: cover; /* 배경 이미지 크기를 요소에 맞춤 */
+}
+
+#check {
+    display: none; /* 요소를 화면에 표시하지 않음 (존재는 하는 상태)*/
+}
+
+/* 반응 선택자 */
+#active-test, #hover-test {
+    width: 150px;
+    height: 150px;
+    background-color: indianred;
+}
+
+/* :active */
+#active-test:active {
+    background-color: yellow;
+    color: red;
+    scale: 90%; /* 크기 */
+}
+
+/* :hover */
+#hover-test:hover {
+    background-color: green;
+    transition-duration: 1s;
+}
+
+/* 상태 선택자 */
+
+/* :checked -> 체크가 되었을 때(radio, checkbox) */
+input[name=fruits]:checked {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+}
+
+/* :focus -> input에 초점이 맞춰 졌을 때 (text 형태 input)*/
+#userId:focus, #userPwd:focus {
+    /*background-color: pink;*/
+    outline: none;
+    border: none;
+    border-bottom: 2px solid green;
+}
+
+/* :enabled, :disabled -> 활성화, 비활성화 */
+option:enabled {
+    background-color: springgreen;
+}
+
+option:disabled {
+    background-color: crimson;
+}
+
+input:disabled {
+    background-color: red;
+}
+
+button:disabled {
+    background-color: blue;
+}
